@@ -1,0 +1,17 @@
+﻿body, input, button {
+    font-family: inherit; /* Use the system's font */
+    background-color: transparent; /* Transparent background */
+}
+
+#timer {
+    text-align: center;
+    color: #000; /* Adjust based on the preferred color scheme */
+}
+
+#time-display {
+    font-size: 48px; /* Big digital clock display */
+}
+
+button {
+    margin: 5px;
+}
