@@ -1,43 +1,44 @@
-﻿body {
+﻿:root {
+    --background-color: #ffffff; /* Light mode background */
+    --text-color: #000000; /* Light mode text */
+    --button-background-color: #007bff; /* Light mode button background */
+    --button-hover-color: #0056b3; /* Light mode button hover */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #333333; /* Dark mode background */
+        --text-color: #ffffff; /* Dark mode text */
+        --button-background-color: #0056b3; /* Dark mode button background */
+        --button-hover-color: #003f7f; /* Dark mode button hover */
+    }
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: transparent;
 }
 
 .widget {
     text-align: center;
-    background-color: #fff;
+    background-color: var(--background-color);
+    color: var(--text-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.timer {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-input {
-    margin: 5px;
-    padding: 10px;
-    font-size: 1em;
-    width: 100px;
-}
-
+/* Update button styles to use variables */
 button {
-    display: block;
-    margin: auto;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #007bff;
+    background-color: var(--button-background-color);
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
     button:hover {
-        background-color: #0056b3;
+        background-color: var(--button-hover-color);
     }
+
+/* Rest of the styles remain the same */

@@ -27,3 +27,29 @@ document.getElementById('startButton').addEventListener('click', () => {
         }
     }, 1000);
 });
+
+let interval;
+let pausedTime = 0; // To track the remaining time when paused
+
+document.getElementById('startButton').addEventListener('click', startTimer);
+document.getElementById('pauseButton').addEventListener('click', pauseTimer);
+
+function startTimer() {
+    // Initialization code from the previous version...
+    clearInterval(interval); // Clear any existing intervals
+    document.getElementById('pauseButton').style.display = 'inline'; // Show pause button
+    // Modified timer code to account for pausedTime...
+}
+
+function pauseTimer() {
+    clearInterval(interval); // Stop the timer
+    document.getElementById('pauseButton').style.display = 'none'; // Hide pause button
+    // Save remaining time to pausedTime or reset if already paused...
+    const timerElement = document.getElementById('timer');
+    const currentTime = timerElement.textContent.split(':');
+    pausedTime = (parseInt(currentTime[0], 10) * 3600 + parseInt(currentTime[1], 10) * 60 + parseInt(currentTime[2], 10)) * 1000;
+}
+
+// Modify the existing timer code to resume from pausedTime if it's not 0
+// And adjust the end time calculation based on pausedTime
+
