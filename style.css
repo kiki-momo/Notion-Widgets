@@ -1,0 +1,34 @@
+﻿body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Notion uses Inter font */
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#widget-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Ensure text elements are centered */
+    color: var(--text-color, #000); /* Default text color */
+    /* Add any additional styling for the container as needed */
+}
+
+#timer-display {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+button, input[type=number] {
+    margin: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #fff;
+    }
+}
