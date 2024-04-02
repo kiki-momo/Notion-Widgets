@@ -1,0 +1,49 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Using Inter font as per Notion's style */
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#widget-container {
+    text-align: center;
+    color: var(--text-color, #000); /* Default text color, changes with theme */
+}
+
+#timer-display {
+    font-size: 5rem; /* Large font size for clarity */
+    margin: 20px 0; /* Spacing around the timer display */
+    background: none; /* Transparent background */
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Spacing between buttons */
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px 20px; /* Padding for larger clickable area */
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px; /* Rounded corners as per the reference image */
+    background-color: #0000ff; /* Blue background for buttons */
+    color: white; /* White text on buttons */
+    cursor: pointer; /* Cursor indicates clickable buttons */
+}
+
+button:disabled {
+    background-color: #cccccc; /* Greyed out button for disabled state */
+    cursor: default;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #fff; /* Light text for dark theme */
+    }
+}
