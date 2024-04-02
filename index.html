@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Time Box Widget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="widget-container">
+        <div id="timer-display">00:00:00</div>
+        <input type="number" id="time-input" placeholder="Minutes" min="1">
+        <button id="start-btn">Start</button>
+        <button id="pause-btn" disabled>Pause</button>
+        <button id="resume-btn" disabled>Resume</button>
+        <button id="reset-btn" disabled>Reset</button>
+    </div>
+    <audio id="end-sound" src="alarm.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
